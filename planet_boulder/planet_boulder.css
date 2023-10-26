@@ -13,7 +13,7 @@ body, html {
     transform: translateX(-50%);
     width: 350px;
     height: auto;
-    z-index: 2;
+    z-index: -1;
 }
 
 #hacking-text {
