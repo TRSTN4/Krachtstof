@@ -125,6 +125,9 @@ document.getElementById('analyzeBtn').addEventListener('click', async function()
 		const bigImage = document.createElement('img');
 		bigImage.id = 'bigImage';
 		bigImage.src = 'img/check.gif';
+        bigImage.addEventListener('click', function() {
+            window.location.href = "planet_boulder.html";
+        });
 		document.body.appendChild(bigImage);
 	
 		setTimeout(() => {
