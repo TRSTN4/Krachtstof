@@ -68,7 +68,7 @@ button {
 
 	font-family: 'Courier New', monospace;
 
-    z-index: 4;
+    z-index: 15;
 }
 
 button:hover {
@@ -86,6 +86,7 @@ button:active {
     height: 50px;
     opacity: 1;
     transition: all 5s ease-out;
+    z-index: 14;
 }
 
 @media (max-width: 480px) {
@@ -205,4 +206,19 @@ body, html {
     justify-content: center;
     align-items: center;
     height: 100%;
+}
+
+img {
+    max-width: 50%;
+    height: auto;
+}
+
+#analyzeBtn {
+    /* ... existing styles ... */
+    font-size: 2vw;  /* Use viewport width unit */
+}
+
+#hacking-text {
+    /* ... existing styles ... */
+    font-size: 1vw;  /* Reduce the viewport width unit */
 }

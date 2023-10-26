@@ -15,14 +15,14 @@ function animateAnalyzingText() {
 
 function animateAnalyzedText() {
     const btn = document.getElementById('analyzeBtn');
-    const states = ["Geslaag", "Geslaag!"];
+    const states = ["Geslaagd", "Geslaagd!"];
     btn.textContent = states[analyzeTextState];
     analyzeTextState = (analyzeTextState + 1) % states.length;
 }
 
 function animateToAnalyzeText() {
     const btn = document.getElementById('analyzeBtn');
-    const states = ["Analyzeer", "> Analyzeer <", ">> Analyzeer <<", ">>> Analyzeer <<<", ">> Analyzeer <<", "> Analyzeer <"];
+    const states = ["Analyseer", "> Analyseer <", ">> Analyseer <<", ">>> Analyseer <<<", ">> Analyseer <<", "> Analyseer <"];
     btn.textContent = states[analyzeTextState];
     analyzeTextState = (analyzeTextState + 1) % states.length;
 }
