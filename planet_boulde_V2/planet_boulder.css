@@ -1,0 +1,224 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+    position: relative;
+}
+
+#logo {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 350px;
+    height: auto;
+    z-index: -1;
+}
+
+#hacking-text {
+    position: absolute;
+    top: 10%;
+    left: 5%;
+    font-family: 'Courier New', monospace;
+    color: #00ff00;
+    white-space: pre;
+    font-size: 16px;
+    line-height: 1.5;
+    z-index: 2;
+}
+
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+	background-color: #010101;
+    background-image: url('img/.gif');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: -1;
+}
+
+.center-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+button {
+    width: 40vw;
+    height: 5vh;
+    border: none;
+    background-color: #0a0a0a;
+    color: #00ff00;
+    font-size: 2em;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 1;
+    position: relative;
+    box-shadow: 0 0 10px #00ff00;
+    outline: none;
+    transition: transform 0.3s, box-shadow 0.3s;
+
+    background: linear-gradient(145deg, #0a0a0a, #222222);
+
+	font-family: 'Courier New', monospace;
+
+    z-index: 15;
+}
+
+button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px #00ff00, 0 0 5px #00ff00;
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+.flying-image {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    opacity: 1;
+    transition: all 5s ease-out;
+    z-index: 14;
+}
+
+@media (max-width: 480px) {
+    button {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+}
+
+#conclusion-text {
+    position: absolute;
+    bottom: 10%;
+    width: 100%;
+    text-align: center;
+	font-family: 'Courier New', monospace;
+    color: #00ff00;
+    white-space: pre;
+    font-size: 16px;
+    line-height: 1.5;
+    z-index: 2;
+}
+
+.green-gradient-text::before {
+    content: attr(data-content);
+    background: -webkit-linear-gradient(left, #004d00, #009900, #33cc33, #66ff66);
+    -webkit-background-clip: text;
+    color: transparent;
+    white-space: pre;
+}
+
+.orange-gradient-text::before {
+    content: attr(data-content);
+    background: -webkit-linear-gradient(left, #ff6600, #ff9900, #ffcc00, #ffcc66);
+    -webkit-background-clip: text;
+    color: transparent;
+    white-space: pre;
+}
+
+.login-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    z-index: 3;
+}
+
+#nameInput {
+	width: 40vw;
+    height: 5vh;
+	text-align: center;
+    padding: 10px 15px;
+    font-size: 1.2em;
+    border: 2px solid #00ff00;
+    border-radius: 5px;
+    background: #0a0a0a;
+    color: #00ff00;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+#nameInput:focus {
+    border-color: #66ff66;
+}
+
+#loginBtn {
+    padding: 8px 15px;
+    font-size: 1.2em;
+    background: #0a0a0a;
+    color: #00ff00;
+    border: 2px solid #00ff00;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#loginBtn:hover {
+    background: #00ff00;
+    color: #0a0a0a;
+}
+
+#analyzeBtn, #hacking-text, #conclusion-text, #text-logo {
+    transition: opacity 3s;
+}
+
+#bigImage {
+    opacity: 0;
+    transition: opacity 2s;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 80%;
+    max-height: 80%;
+}
+
+body, html {
+    min-width: 320px;
+}
+
+@media (max-width: 480px) {
+    #hacking-text, #conclusion-text {
+        font-size: 14px;
+    }
+}
+
+#nameInput {
+    max-width: 400px;
+}
+
+.center-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+img {
+    max-width: 50%;
+    height: auto;
+}
+
+#analyzeBtn {
+    /* ... existing styles ... */
+    font-size: 2vw;  /* Use viewport width unit */
+}
+
+#hacking-text {
+    /* ... existing styles ... */
+    font-size: 1vw;  /* Reduce the viewport width unit */
+}
